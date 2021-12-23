@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akhangat01
+spec:
+  selector:
+    matchLabels:
+      app: akhangat01
+  template:
+    metadata:
+      labels:
+        app: akhangat01
+    spec:
+      containers:
+      - name: akhangat01
+        image: cloudnativeacr01.azurecr.io/akhangat:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5001
