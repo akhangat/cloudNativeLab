@@ -26,7 +26,7 @@ jobs:
         # Container registry server url
         login-server: cloudnativeacr01.azurecr.io
     - name: Push Image  
-      run: docker push cloudnativeacr01.azurecr.io/cloudnativeaction:latest
+      run: docker push cloudnativeacr01.azurecr.io/akhangat:v1
       
   deploy:
     runs-on: ubuntu-latest
